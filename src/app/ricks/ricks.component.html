@@ -1,0 +1,21 @@
+<h2>Ricks</h2>
+
+<div>
+  <label>Nomes de Rick:
+    <input #rickName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(rickName.value); rickName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="ricks">
+  <li *ngFor="let rick of ricks">
+    <a routerLink="/detail/{{rick.id}}">
+      <span class="badge">{{rick.id}}</span> {{rick.name}}
+    </a>
+    <button class="delete" title="delete rick"
+      (click)="delete(rick)">x</button>
+  </li>
+</ul>

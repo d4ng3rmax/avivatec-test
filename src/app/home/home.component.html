@@ -1,0 +1,11 @@
+<h3>Ricks and Morty's</h3>
+<app-rick-search></app-rick-search>
+<div class="grid grid-pad">
+  <a *ngFor="let rick of ricks" class="col-1-4"
+      routerLink="/detail/{{rick.id}}">
+    <div class="module rick">
+      <h4>{{rick.name}}</h4>
+    </div>
+  </a>
+</div>
+

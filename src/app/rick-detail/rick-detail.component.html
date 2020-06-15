@@ -1,0 +1,12 @@
+<div *ngIf="rick">
+  <h2>{{rick.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{rick.id}}</div>
+  <div>
+  <div>
+    <label>Dimensão:
+      <input [(ngModel)]="rick.name" placeholder="name" />
+    </label>
+  </div>
+  <button (click)="goBack()">voltar</button>
+  <button (click)="save()">salvar</button>
+</div>
